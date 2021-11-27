@@ -14,5 +14,5 @@ This repogitory is a summary of the blog at the URL below:
 
 |  | Function | Pros | Cons |
 | --- | --- | --- | --- |
-| Kube-Proxy --- | --- | --- |
+| Kube-Proxy | --- | --- | --- |
 | Istio Sidecar-Proxy | --- | --- | --- |
