@@ -15,5 +15,5 @@ This repogitory is a summary of the blog at the URL below:
 |  | Layer | Function | Pros | Cons |
 | --- | --- | --- | --- | --- |
 | Kube-Proxy | UserSpace | Kube-proxy creates an iptables rule for each of the backend Pods in the Service. | --- | --- |
-| iptables (Service) | After catching the traffic sent to the ClusterIP, iptables forwards that traffic directly to one of the backend Pod using DNAT. | --- | --- |
+| iptables (Service) | Kernel | After catching the traffic sent to the ClusterIP, iptables forwards that traffic directly to one of the backend Pod using DNAT. | --- |
 | Istio Sidecar-Proxy | UserSpace | --- | --- | --- |
