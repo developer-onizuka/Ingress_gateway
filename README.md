@@ -3,7 +3,7 @@
 This repogitory is a summary of the blog at the URL below:
 - https://medium.com/@zhaohuabing/which-one-is-the-right-choice-for-the-ingress-gateway-of-your-service-mesh-21a280d4a29c
 
-We can use kubernetes at the combination between {Kube-Proxy, Sidecar Proxy} and {ClusteIP, NodePort, LoadBalancer, Ingress, Ingress Gateway }
+We can use kubernetes at the combination between {Kube-Proxy, Sidecar Proxy} and {ClusteIP, NodePort, LoadBalancer, Ingress, Ingress Gateway}.
 
 # 1. Proxy and Services
 |  | Layer | Function |
