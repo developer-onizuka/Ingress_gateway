@@ -5,7 +5,7 @@ This repogitory is a summary of the blog at the URL below:
 
 We can use kubernetes at the combination between {Kube-Proxy, Sidecar Proxy} and {ClusteIP, NodePort, LoadBalancer, Ingress, Ingress Gateway}.
 
-# 1. Proxy and Services
+# 1. Proxy
 |  | Layer | Function |
 | --- | --- | --- |
 | Kube-Proxy | L4 | Kube-proxy creates an iptables rule for each of the backend Pods in the Service. After catching the traffic sent to the ClusterIP, iptables forwards that traffic directly to one of the backend Pod using DNAT. |
