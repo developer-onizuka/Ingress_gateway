@@ -13,7 +13,7 @@ This repogitory is a summary of the blog at the URL below:
 # 2. How to expose the service outside
 |  | Layer | Function | Pros | Cons |
 | --- | --- | --- | --- | --- |
-| ClusterIP | L4 | No Access from Outside. | A Service is bound to a ClusterIP, which is a virtual IP address. No matter what happens to the backend Pods, the ClusterIP never changes, so a client inside of the cluster can always send requests to the ClusterIP of the Service. | Only provides very basic service discovery and limited load balancing policies. |
+| ClusterIP | L4 | ClusterIP is only reachable inside a Kubernetes cluster. | A Service is bound to a ClusterIP, which is a virtual IP address. No matter what happens to the backend Pods, the ClusterIP never changes, so a client inside of the cluster can always send requests to the ClusterIP of the Service. | Only provides very basic service discovery and limited load balancing policies. |
 | NodePort |   |   |   |   |
 | LoadBalancer |   |   |   |   |
 | Ingress |   |   |   |   |
