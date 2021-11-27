@@ -1,6 +1,6 @@
 # Ingress_gateway
 
-This repogitory is summary  the blog at the URL below:
+This repogitory is a summary of the blog at the URL below:
 - https://medium.com/@zhaohuabing/which-one-is-the-right-choice-for-the-ingress-gateway-of-your-service-mesh-21a280d4a29c
 
 |  | Function | Pros | Cons |
