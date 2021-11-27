@@ -14,14 +14,7 @@ This repogitory is a summary of the blog at the URL below:
 
 
 # 2. Proxy and Services
-
-# 2-1. Kubernetes Native Proxy
 |  | Layer | Function |
 | --- | --- | --- |
-| Kube-Proxy | UserSpace | Kube-proxy creates an iptables rule for each of the backend Pods in the Service. |
-| iptables (Service) | Kernel | After catching the traffic sent to the ClusterIP, iptables forwards that traffic directly to one of the backend Pod using DNAT. |
-
-# 2-2. Istio Sidecar Proxy
-|  | Layer | Function |
-| --- | --- | --- |
-| Istio Sidecar Proxy | UserSpace | A client request is captured and redirected to the sidecar proxy by iptables. Then, the sidecar proxy chooses a backend pod according to the service discovery information and routing rules obtained from the control plane, and forwards the request to it. Istio sidecar proxy works just like Kube-proxy userspace mode. They both work in userspace to proxy the client request and load balance among multiple back-end Pods. The difference is that Kube-proxy only works on OSI layer 4, while Istio sidecar proxy can also handle OSI layer 7 packages.|
+| Kube-Proxy | L4 | Kube-proxy creates an iptables rule for each of the backend Pods in the Service. After catching the traffic sent to the ClusterIP, iptables forwards that traffic directly to one of the backend Pod using DNAT. |
+| Istio Sidecar Proxy | L7 | A client request is captured and redirected to the sidecar proxy by iptables. Then, the sidecar proxy chooses a backend pod according to the service discovery information and routing rules obtained from the control plane, and forwards the request to it. Istio sidecar proxy works just like Kube-proxy userspace mode. They both work in userspace to proxy the client request and load balance among multiple back-end Pods. The difference is that Kube-proxy only works on OSI layer 4, while Istio sidecar proxy can also handle OSI layer 7 packages.|
