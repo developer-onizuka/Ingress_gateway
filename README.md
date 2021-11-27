@@ -11,7 +11,7 @@ This repogitory is a summary of the blog at the URL below:
 
 
 # 2. How to expose the service outside
-|  | Layer | Function | Pros | Cons |
+|  | Layer | Function / How to work | Pros | Cons |
 | --- | --- | --- | --- | --- |
 | ClusterIP | L4 | ClusterIP is only reachable inside a Kubernetes cluster. | A Service is bound to a ClusterIP, which is a virtual IP address. No matter what happens to the backend Pods, the ClusterIP never changes, so a client inside of the cluster can always send requests to the ClusterIP of the Service. | Only provides very basic service discovery and limited load balancing policies. |
 | NodePort | L4 | If a Service is declared as NodePort type, Kube-proxy will create a port on the node and listen on that port. But Kube-proxy will not directly accept traffic from node networks, instead, it will create the corresponding iptables rules which will capture the traffic sent to the NodePort and redirect that traffic to the back-end Pods. | NodePort is a convenient tool for testing in your local Kubernetes cluster. | Any node may crash or be removed from a Kubernetes cluster. When a new one comes in, the IP address of the new node is normally dynamically allocated from an address pool, which means we can’t treat node IP as a well-known IP. |
