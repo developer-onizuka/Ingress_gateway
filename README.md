@@ -10,3 +10,9 @@ This repogitory is a summary of the blog at the URL below:
 | LoadBalancer |   |   |   |   |
 | Ingress |   |   |   |   |
 | Ingress Gateway |   |   |   |   |
+
+
+|  | Function | Pros | Cons |
+| --- | --- | --- | --- |
+| Kube-Proxy --- | --- | --- |
+| Istio Sidecar-Proxy | --- | --- | --- |
