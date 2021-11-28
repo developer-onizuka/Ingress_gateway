@@ -9,9 +9,10 @@ This blog said "an API gateway and a sidecar proxy are used as the ingress gatew
 
 But I believe how to expose service is based on convenience which is desired. 
 
-|  | How to expose | Conveinience |
+|  | How to expose | Impression |
 | --- | --- | --- |
-| Step1 | kube-Proxy & NodePort | Seems to be needed LoadBalance such as HAproxy outside, But it's so bother! |
+| Step1 | kube-Proxy & NodePort | Seems to need LoadBalance such as HAproxy outside, But it's so bother! |
+| Step2 | kube-Proxy & LoadBalancer | IP address exposed by LoadBalancer seems to be bound for each service, so it means we must prepare many IP addresses for each LoandBalancer and Service. |
 
 
 # 1. Proxy
