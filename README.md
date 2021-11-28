@@ -6,7 +6,7 @@ The blog I attached below said "an API gateway and a sidecar proxy are used as t
 
 But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a perfect solution for me. Anyway I believe how to expose service is based on convenience which you desire. Let me organaize it as below:
 
-|  | How to expose | Impression to convenience which you desire |
+|  | How to expose | Impressions to convenience which you desire |
 | --- | --- | --- |
 | Step1 | kube-Proxy & NodePort https://github.com/developer-onizuka/kubernetes#0-1-workloads | Seems to need LoadBalance such as HAproxy outside, But it's so bother for considering scaling out/in! Let's use LoadBalance Controller in Cloud! |
 | Step2 | kube-Proxy & LoadBalancer https://github.com/developer-onizuka/LoadBalancer | IP address exposed by LoadBalancer Controller seems to be bound for each service, so it means we must prepare many IP addresses for each LoandBalancer and Service. I don't like that! So Let's introduce Ingress Controller and Ingress so that it can be aware about L7! |
