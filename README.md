@@ -16,8 +16,11 @@ But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a per
 
 
 
+
+
 Followings are summary of the URL below:
 - https://medium.com/@zhaohuabing/which-one-is-the-right-choice-for-the-ingress-gateway-of-your-service-mesh-21a280d4a29c
+
 This blog is very helpful in understanding how L4/L7 works and relation between LoadBalancer and Ingress.
 
 
