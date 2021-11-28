@@ -1,13 +1,10 @@
 # Ingress_gateway
 
-This repogitory is a summary of the blog at the URL below:
-- https://medium.com/@zhaohuabing/which-one-is-the-right-choice-for-the-ingress-gateway-of-your-service-mesh-21a280d4a29c
-
 We can use kubernetes at the combination among {Kube-Proxy, Sidecar Proxy}, {ClusteIP, NodePort, LoadBalancer} and {Ingress, Ingress Gateway, API Gateway, don't use anything}. 
 
-This blog said "an API gateway and a sidecar proxy are used as the ingress gateway of the service mesh. Since the API Gateway already has the function of a layer 7 gateway, the sidecar proxy behind it only needs to provide the routing capability of the Istio VirtualService resource and doesn’t need to provide the capability of the Istio Gateway resource." 
+The blog I attached below said "an API gateway and a sidecar proxy are used as the ingress gateway of the service mesh. Since the API Gateway already has the function of a layer 7 gateway, the sidecar proxy behind it only needs to provide the routing capability of the Istio VirtualService resource and doesn’t need to provide the capability of the Istio Gateway resource." 
 
-But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a perfect solution for me. Anyway I believe how to expose service is based on convenience which is desired. 
+But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a perfect solution for me. Anyway I believe how to expose service is based on convenience which is desired. Let me organaize it as below:
 
 |  | How to expose | Impression |
 | --- | --- | --- |
@@ -16,6 +13,10 @@ But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a per
 | Step3 | kube-Proxy & LoadBalancer & Ingress | Sounds good. But I wanna do some advanced routing rules, distributed tracing, policy checking and metrics collections. How to do that? |
 | Step4 | Sidecar-Proxy & LoadBalancer & Ingress | Using kiali and grafana so that I can manage each micro-service. But there are two  control planes (Ingress Control plane which processes the k8s ingress rules and istio control plane). I don't like manage both of control planes! |
 | Step5 | Sidecar-Proxy & LoadBalancer & Ingress Gateway | Start using the Ingress Gateway instead of Ingress Controller. Both the ingress gateway and the sidecar proxies are managed by a unified mesh control plane! Perfect! |
+
+
+Followings are summary of the URL below:
+- https://medium.com/@zhaohuabing/which-one-is-the-right-choice-for-the-ingress-gateway-of-your-service-mesh-21a280d4a29c
 
 # 1. Proxy
 |  | Function |
