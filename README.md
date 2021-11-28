@@ -15,8 +15,11 @@ But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a per
 | Step5 | Sidecar-Proxy & LoadBalancer & Ingress Gateway | Start using the Ingress Gateway instead of Ingress Controller. Both the ingress gateway and the sidecar proxies are managed by a unified mesh control plane! Perfect! |
 
 
+
 Followings are summary of the URL below:
 - https://medium.com/@zhaohuabing/which-one-is-the-right-choice-for-the-ingress-gateway-of-your-service-mesh-21a280d4a29c
+This blog is very helpful in understanding how L4/L7 works and relation between LoadBalancer and Ingress.
+
 
 # 1. Proxy
 |  | Function |
