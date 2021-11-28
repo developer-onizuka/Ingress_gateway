@@ -4,7 +4,7 @@ We can use kubernetes at the combination among {Kube-Proxy, Sidecar Proxy}, {Clu
 
 The blog I attached below said "an API gateway and a sidecar proxy are used as the ingress gateway of the service mesh. Since the API Gateway already has the function of a layer 7 gateway, the sidecar proxy behind it only needs to provide the routing capability of the Istio VirtualService resource and doesn’t need to provide the capability of the Istio Gateway resource." 
 
-But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a perfect solution for me. Anyway I believe how to expose service is based on convenience which is desired. Let me organaize it as below:
+But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a perfect solution for me. Anyway I believe how to expose service is based on convenience which you desire. Let me organaize it as below:
 
 |  | How to expose | Impression |
 | --- | --- | --- |
