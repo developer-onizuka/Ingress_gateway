@@ -14,6 +14,7 @@ But I believe how to expose service is based on convenience which is desired.
 | Step1 | kube-Proxy & NodePort | Seems to need LoadBalance such as HAproxy outside, But it's so bother for considering scaling out/in! Let's use LoadBalancer! |
 | Step2 | kube-Proxy & LoadBalancer | IP address exposed by LoadBalancer Controller seems to be bound for each service, so it means we must prepare many IP addresses for each LoandBalancer and Service. I don't like that! So Let's introduce Ingress Controller and Ingress so that it can be aware about L7! |
 | Step3 | kube-Proxy & LoadBalancer & Ingress | Perfect! But I wanna do some advanced routing rules, distributed tracing, policy checking and metrics collections. How to do that? |
+| Step4 | Sidecar-Proxy & LoadBalancer & Ingress | Using kiali and grafana so that I can managet each micro service. But there are two  control planes (istio control plane and Ingress Control plane) |
 
 
 # 1. Proxy
