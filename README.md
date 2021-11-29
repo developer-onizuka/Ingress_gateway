@@ -8,6 +8,7 @@ But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a per
 
 |  | How to expose | Impressions to convenience which you desire |
 | --- | --- | --- |
+| Step0 | kube-Proxy & ClusterIP | Not Available to expose outside of kubernetes Cluster! |
 | Step1 | kube-Proxy & NodePort https://github.com/developer-onizuka/kubernetes#0-1-workloads | Seems to need some LoadBalances such as HAproxy outside, But it's so bother for considering to scaling out/in by myself! Let's use the Controller of LoadBalance in Cloud! |
 | Step2 | kube-Proxy & LoadBalancer https://github.com/developer-onizuka/LoadBalancer | IP address exposed by Controller of LoadBalance seems to be bound for each service, so it means we must prepare many IP addresses for each LoandBalancer bound for Service. I don't like that! So Let's introduce Ingress Controller and Ingress into the inside of the k8s cluster so that it can be aware about L7 which does not need to use many IP addresses! |
 | Step3 | kube-Proxy & LoadBalancer & Ingress https://github.com/developer-onizuka/Ingress | Sounds good. But I wanna do some advanced routing rules, distributed tracing, policy checking and metrics collections. How to do that? |
