@@ -6,7 +6,7 @@ The blog I attached below said "an API gateway and a sidecar proxy are used as t
 
 But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a perfect solution for me. Anyway I believe how to expose service is based on convenience which you desire. Let me organaize it as below:
 
-Anyway, Ingress gateway is one of the steps for  DevOps engineers to run L7 applications in kubernetes cluster!
+Ingress gateway is one of the steps for  DevOps engineers to run L7 applications in kubernetes cluster!
 
 |  | How to expose | Impressions about conveniences which you desire |
 | --- | --- | --- |
