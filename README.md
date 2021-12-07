@@ -6,7 +6,7 @@ The blog I attached below said "an API gateway and a sidecar proxy are used as t
 
 But I am thinking that "Sidecar-Proxy & LoadBalancer & Ingress Gateway" is a perfect solution for me. Anyway I believe how to expose service is based on convenience which you desire. Let me organaize it as below:
 
-|  | How to expose | Impressions to convenience which you desire |
+|  | How to expose | Impressions about conveniences which you desire |
 | --- | --- | --- |
 | Step0 | kube-Proxy & ClusterIP | Not Available to expose outside of kubernetes Cluster! |
 | Step1 | kube-Proxy & NodePort https://github.com/developer-onizuka/kubernetes#0-1-workloads | Seems to need some LoadBalances such as HAproxy outside, But it's so bother for considering to scaling out/in by myself! Let's use the Controller of LoadBalance in Cloud! |
